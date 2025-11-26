@@ -1,0 +1,134 @@
+/* reset.css — Modern CSS reset
+   - Úsalo al inicio de tus hojas de estilo (link rel="stylesheet" href="reset.css")
+   - Inspirado en Meyer reset + buenas prácticas modernas
+*/
+
+/* 1) Box sizing más predecible */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%; /* evita zoom automático en iOS al cambiar tamaño de fuente */
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* 2) Eliminar márgenes/padding por defecto y normalizar tipografía */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-size: 100%;
+  font: inherit;
+  color: inherit;
+}
+
+/* 3) HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* 4) Body defaults */
+body {
+  line-height: 1.5;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5) Lists sin estilo por defecto */
+ol, ul {
+  list-style: none;
+}
+
+/* 6) Enlaces: quitar subrayado por defecto pero conservar accesibilidad */
+a {
+  text-decoration: none;
+  color: inherit; /* dejar al autor decidir el color */
+}
+a:focus, a:hover {
+  text-decoration: underline;
+}
+
+/* 7) Imágenes y multimedia responsiva */
+img, picture, video, canvas, svg {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 8) Tablas: diseño limpio */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 9) Formularios: heredar fuentes y estilos básicos */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+button { cursor: pointer; }
+
+/* 10) Botones y elementos interactivos: accesibilidad de foco */
+:focus {
+  outline: none; /* preferimos focus-visible abajo */
+}
+:focus-visible {
+  outline: 3px solid Highlight; /* sensible para accesibilidad */
+  outline-offset: 2px;
+}
+
+/* 11) Inputs tipo search, number etc. — quitar flechas/numeric spinners donde procede */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 12) Remover resaltado de elementos seleccionados por defecto en móviles (opcional) */
+button::-moz-focus-inner { border: 0; }
+
+/* 13) Animaciones: respetar preferencia de usuario */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 14) Utilidades mínimas (puedes sobrescribir en tu CSS) */
+.hidden { display: none !important; }
+.invisible { visibility: hidden !important; }
+
+/* 15) Impresión: limpiar colores y fondos innecesarios */
+@media print {
+  * { -webkit-print-color-adjust: exact; color-adjust: exact; }
+  a::after { content: " (" attr(href) ")"; font-size: 90%; }
+}
+
+/* Fin de reset.css */

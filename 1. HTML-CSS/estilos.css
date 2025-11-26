@@ -1,7 +1,52 @@
-.fondo {
+body{
     background-color: red;
 }
-.miTexto {
-    color: green;
-    font-size: 80px;
+
+.title{
+    font-size: 1.5em;
+    color: rgb(56, 94, 199);
+}
+
+.logo{
+    width: 200px;
+}
+
+.cards{
+    border: 2px solid black;
+    width: fit-content;
+    padding: 0px 1em 1em 1em;
+    border-radius: 15%;
+    transform: 1s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.cards:hover{
+    background-color: blueviolet;
+}
+
+#principal{
+    font-size: 50px;
+}
+
+#titulos{
+    border: 2px solid black;
+    width: 65vw;
+    margin: auto;
+    padding: 3em;
+}
+
+#cards-container{
+    background-color: cyan;
+    width: 85vw;
+    margin: auto;
+    margin-top: 1.5em;
+    border: 2px solid rgb(68, 59, 59);
+    border-radius: 15px;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
